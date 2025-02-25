@@ -1,0 +1,7 @@
+{
+  "name": "test-kabum/test-kabum",
+  "description": "Portal administrativo",
+  "require": {
+    "vlucas/phpdotenv": "^5.5"
+  }
+}
