@@ -1,0 +1,20 @@
+# Arquivos sensíveis
+.env
+app/config/config.php
+
+# Dependências do Composer
+vendor/
+
+# Logs, cache e arquivos temporários
+logs/
+cache/
+*.log
+
+# Sistema operacional (macOS, Windows)
+.DS_Store
+Thumbs.db
+
+# Arquivos IDEs/editores (VSCode, PHPStorm)
+.vscode/
+.idea/
+*.swp
