@@ -56,17 +56,53 @@ th {
   margin: 0.30rem;
 }
 
+.btn.adicionar { 
+  display: inline-block;
+  padding: 12px;
+  background: #ff6500;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  text-align: left; 
+  width: 180px;
+  padding-left: 15px; 
+}
+
+
+.btn.adicionar:hover {
+  background: #ff6500;
+  box-shadow: 0px 4px 8px rgba(170, 63, 1, 0.3);
+  transform: translateY(-2px);
+}
+
 .editar {
   background-color: #28a745;
+  transition: all 0.3s ease-in-out;
+
+
 }
 
 .excluir {
   background-color: #dc3545;
+  transition: all 0.3s ease-in-out;
+
 }
 
-.adicionar {
-  background-color: #ffc107;
+.editar:hover {
+  background-color: #28a745;
+  transform: translateY(-2px);
+
 }
+
+.excluir:hover {
+  background-color: #dc3545;
+  transform: translateY(-2px);
+}
+
 
 .btn:hover {
   opacity: 0.8;
