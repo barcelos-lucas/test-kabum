@@ -1,0 +1,126 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #007bff;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn {
+  padding: 0.4rem 0.6rem;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+  margin: 0.30rem;
+}
+
+.editar {
+  color: black;
+  background-color: #28a745;
+  text-decoration: none;
+}
+
+.excluir {
+  color: black;
+  background-color: #dc3545;
+  text-decoration: none;
+
+}
+
+.adicionar {
+  color: black;
+  background-color: #ff6500;
+  text-decoration: none;
+
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+
+
+
+/* Estilização moderna para a mensagem de exclusão bem-sucedida */
+.mensagem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-align: center;
+  margin: 15px auto;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.sucesso {
+  background: linear-gradient(90deg, #ff954e 0%, #ff7519 100%);
+  color: white;
+  border-left: 5px solid #ff6500;
+}
+
+/* Ícone ✔ antes da mensagem */
+.sucesso::before {
+  content: "✔ ";
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
