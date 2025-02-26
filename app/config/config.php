@@ -1,12 +1,21 @@
 <?php
 
-if (file_exists(__DIR__ . '/../.env')) {
-    $env = parse_ini_file(__DIR__ . '/../.env');
-    
-    define('DB_HOST', $env['DB_HOST']);
-    define('DB_NAME', $env['DB_NAME']);
-    define('DB_USER', $env['DB_USER']);
-    define('DB_PASS', $env['DB_PASS']);
-} else {
-    die("Arquivo .env não encontrado.");
+require_once __DIR__ . '/../../vendor/autoload.php';  
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../../'); // Carregar .env da raiz
+$dotenv->load();
+
+function conectarBanco() {
+    try {
+        // Pegando valores do arquivo .env corretamente
+        $pdo = new PDO(
+            'mysql:host=' . $_ENV['DB_HOST'] . ';dbname=' . $_ENV['DB_NAME'],
+            $_ENV['DB_USER'],
+            $_ENV['DB_PASS']
+        );
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        return $pdo;
+    } catch (PDOException $e) {
+        die('Erro na conexão: ' . $e->getMessage());
+    }
 }

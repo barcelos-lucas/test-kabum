@@ -8,14 +8,15 @@ class Database {
     private $password = DB_PASS;
     public $conn;
 
-    public function getConnection() {
-        $this->conn = null;
+    function conectarBanco() {
         try {
-            $this->conn = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->db_name, $this->username, $this->password);
-            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        } catch (PDOException $exception) {
-            echo "Erro na conexão: " . $exception->getMessage();
+            $pdo = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME, DB_USER, DB_PASS, [
+                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,  
+                PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+            ]);
+            return $pdo;
+        } catch (PDOException $e) {
+            die("Erro na conexão: " . $e->getMessage());
         }
-        return $this->conn;
     }
 }
