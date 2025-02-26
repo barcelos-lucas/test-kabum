@@ -30,12 +30,17 @@ if (!isset($_SESSION['usuario_id'])) {
                 <h3>Clientes</h3>
                 <p>Acesse o gerenciador de clientes para listar, incluir, editar e excluir clientes.</p>
                 <a href="clientes.php">Gerenciar Clientes</a>
-            </div>
+            </div>`
             <div class="card">
+                <h3>Adicionar clientes</h3>
+                <p>Adicione novos clientes para o cadastro</p>
+                <a href="adicionarClientes.php">Adicionar Clientes</a>
+            </div>
+            <!-- <div class="card">
                 <h3>Configurações</h3>
                 <p>Altere as configurações</p>
                 <a href="#">Acessar Configurações</a>
-            </div>
+            </div> -->
         </div>
     </div>
 </body>
