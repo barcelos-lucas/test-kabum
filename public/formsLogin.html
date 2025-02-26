@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+<body class="login-page">
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="login.php" method="POST">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+            <button type="submit">Entrar</button>
+            <div id="error-message" style="display: none; color: red; margin-bottom: 10px;"></div>
+
+        </form>
+    </div>
+<script>
+
+function getQueryParam(param) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
+}
+
+const errorMessage = getQueryParam('error');
+if (errorMessage){
+  const errorDiv = document.getElementById('error-message');
+  errorDiv.textContent = decodeURIComponent(errorMessage);
+  errorDiv.style.display = 'block';
+}
+
+    </script>
+  </body>
+</html>
