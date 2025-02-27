@@ -46,6 +46,47 @@ th {
   color: white;
 }
 
+.header-clientes {
+  background: linear-gradient(90deg, #007bff 0%, #0056b3 100%);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-clientes h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.089);
+  background: linear-gradient(90deg, #ffffff, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.btn-dashboard {
+  background: white;
+  color: #007bff;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-dashboard:hover {
+  background: #f8f9fa;
+  color: #0056b3;
+  box-shadow: 0px 4px 8px rgba(0, 123, 255, 0.3);
+  transform: translateY(-2px);
+}
+
 .btn {
   padding: 0.4rem 0.6rem;
   text-decoration: none;
@@ -56,24 +97,58 @@ th {
   margin: 0.30rem;
 }
 
-.editar {
+.btn-adicionar {
+  display: inline-block;
+  padding: 12px;
+  background: #ff6500;
   color: black;
-  background-color: #28a745;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
   text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  text-align: left; 
+  width: 180px;
+  padding-left: 15px; 
+}
+
+.btn-adicionar:hover {
+  background: #ff6500;
+  box-shadow: 0px 4px 8px rgba(170, 63, 1, 0.3);
+  transform: translateY(-2px);
+}
+
+
+.editar {
+  background-color: #28a745;
+  transition: all 0.3s ease-in-out;
 }
 
 .excluir {
-  color: black;
   background-color: #dc3545;
-  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
 
+.editar:hover {
+  background-color: #28a745;
+  transform: translateY(-2px);
+}
+
+.excluir:hover {
+  background-color: #dc3545;
+  transform: translateY(-2px);
 }
 
 .adicionar {
-  color: black;
   background-color: #ff6500;
-  text-decoration: none;
+  transition: all 0.3s ease-in-out;
 
+}
+
+.adicionar:hover {
+  background-color: #ff6500;
+  transform: translateY(-2px);
 }
 
 .btn:hover {
@@ -81,9 +156,6 @@ th {
 }
 
 
-
-
-/* Estilização moderna para a mensagem de exclusão bem-sucedida */
 .mensagem {
   display: flex;
   justify-content: center;
@@ -105,7 +177,6 @@ th {
   border-left: 5px solid #ff6500;
 }
 
-/* Ícone ✔ antes da mensagem */
 .sucesso::before {
   content: "✔ ";
   font-size: 20px;
@@ -113,7 +184,6 @@ th {
   margin-right: 10px;
 }
 
-/* Animação de fade-in */
 @keyframes fadeIn {
   from {
       opacity: 0;

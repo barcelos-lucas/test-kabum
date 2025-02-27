@@ -15,6 +15,47 @@ body {
 }
 
 
+.header-clientes {
+  background: linear-gradient(90deg, #007bff 0%, #0056b3 100%);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 45px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-clientes h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.089);
+  background: linear-gradient(90deg, #ffffff, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.btn-dashboard {
+  background: white;
+  color: #007bff;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-dashboard:hover {
+  background: #f8f9fa;
+  color: #0056b3;
+  box-shadow: 0px 4px 8px rgba(0, 123, 255, 0.3);
+  transform: translateY(-2px);
+}
+
 h2 {
   margin-bottom: 20px;
 }
@@ -77,13 +118,14 @@ button:hover {
 
 .btn {
   display: inline-block;
-  margin: 10px;
-  padding: 10px 15px;
-  text-decoration: none;
+  padding: 12px 20px;
+  background: #007bff;
   color: white;
-  background-color: #007bff;
-  border-radius: 5px;
+  font-size: 16px;
   font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .btn-secundario {
@@ -97,7 +139,6 @@ button:hover {
 .btn-secundario:hover {
   background-color: #ff6500;
 }
-
 
 .login-page {
   display: flex;
@@ -160,10 +201,20 @@ nav a {
 }
 
 .welcome {
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #333;
   margin-bottom: 20px;
+  text-align: left;
 }
 
+.welcome h2 {
+  display: inline;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-left: 0.1rem;
+}
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -171,37 +222,64 @@ nav a {
 }
 
 .card {
-  background: #fff;
+  background: white;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 8px;
   padding: 20px;
-  flex: 1 1 calc(33.33% - 20px);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  flex: 1 1 calc(30% - 20px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-align: left;
 }
 
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Título dos cards */
 .card h3 {
-  margin-top: 0;
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.card p {
+  margin-bottom: 10px;
 }
 
 .card a {
-  color: #007bff;
+  display: inline-block;
+  margin-top: 12px; 
   text-decoration: none;
+  color: #007bff;
   font-weight: bold;
+  transition: color 0.3s ease-in-out;
 }
 
 .card a:hover {
-  text-decoration: underline;
+  color: #0056b3;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .card {
-      flex: 1 1 calc(50% - 20px);
+      flex: 1 1 calc(45% - 20px);
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .card {
-      flex: 1 1 100%;
+      flex: 1 1 calc(100% - 20px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
   }
 }
