@@ -1,0 +1,1 @@
+{"version":1,"defects":[],"times":{"AuthTest::testLoginCorreto":0.059,"AuthTest::testLoginSenhaIncorreta":0.054,"DatabaseTest::testConexaoComBanco":0.001}}
