@@ -1,5 +1,4 @@
 # Arquivos sensíveis
-.env
 app/config/config.php
 .qodo/
 # Dependências do Composer
