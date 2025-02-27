@@ -15,7 +15,6 @@ function buscarEnderecoPorId($pdo, $id) {
 }
 
 
-
 //Adiciona endereço
 function adicionarEnderecos($pdo, $cliente_id, $rua, $numero, $complemento, $bairro, $cidade, $estado, $cep) {
   try {

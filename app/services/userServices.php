@@ -41,10 +41,10 @@ function loginUsuario($pdo, $email, $senha) {
       $_SESSION['usuario_email'] = $usuario['email'];
       $_SESSION['usuario_cargo'] = $usuario['cargo'];
 
-      return true;
+      return $usuario;
   }
 
-  return "Email ou senha incorretos!";
+  return false;
 }
 
 ?>
