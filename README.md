@@ -4,10 +4,10 @@
 Este documento do **Test-Kabum** é um **Portal Administrativo** desenvolvido em **PHP e MySQL**, com um sistema seguro de **autenticação**, **gestão de clientes e endereços**, e **controle de permissões** para administradores.  
 
 🔹 **Principais funcionalidades**:  
-✅ Login e autenticação de usuários
-✅ Area administrativa para os guardiões (users)
-✅ CRUD completo de Clientes e Endereços  
-✅ API ViaCEP integrada para busca automática de endereços  
+✅ Login e autenticação de usuários   
+✅ Area administrativa para os guardiões (users)   
+✅ CRUD completo de Clientes e Endereços    
+✅ API ViaCEP integrada para busca automática de endereços    
 ✅ Permissões diferenciadas para **admins** e **usuários comuns**  
 ✅ Testes automatizados com PHPUnit  
 ✅ Responsivo  
