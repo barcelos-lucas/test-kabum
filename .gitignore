@@ -1,12 +1,12 @@
 # Arquivos sensíveis
-app/config/config.php
-.qodo/
+.env
+
 # Dependências do Composer
+vendor/
 
 # Logs, cache e arquivos temporários
-logs/
-cache/
 *.log
+*.cache
 
 # Sistema operacional (macOS, Windows)
 .DS_Store
@@ -15,4 +15,3 @@ Thumbs.db
 # Arquivos IDEs/editores (VSCode, PHPStorm)
 .vscode/
 .idea/
-*.swp
