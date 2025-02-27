@@ -27,12 +27,12 @@ $enderecos = listarEnderecosPorCliente($pdo, $cliente_id);
     <link rel="stylesheet" href="assets/css/gerenciarEnderecos.css">
 </head>
 <body>
-    <header>
-        <h1>Gerenciar Endereços</h1>
+    <header class="header-enderecos">
+        <h1>GERENCIAR ENDEREÇOS</h1>
         <nav>
-            <a href="dashboard.php">Dashboard</a>
-            <a href="clientes.php">Voltar para Clientes</a>
-            <a href="logout.php">Sair</a>
+            <a href="dashboard.php" class="btn-enderecos-ger">Dashboard</a>
+            <a href="clientes.php" class="btn-enderecos-ger">Clientes</a>
+            <a href="logout.php" class="btn-enderecos-ger">Sair</a>
         </nav>
     </header>
     

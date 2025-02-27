@@ -14,21 +14,20 @@ if (!isset($_SESSION['usuario_id'])) {
 
 </head>
 <body>
-    <header>
-    <h1><a href="dashboard.php" class="titulo-link" >Portal Kabum</a></h1>
+    <header class="header-clientes">
+    <h1>PORTAL ADMINISTRATIVO KABUM</h1>
     <nav>
-            <a href="dashboard.php">Inicio</a>
-            <a href="logout.php">Sair</a>
+            <a href="logout.php" class="btn-dashboard">Sair</a>
         </nav>
     </header>
     <div class="container">
         <div class="welcome">
-            Bem-vindo, <?php echo htmlspecialchars($_SESSION['usuario_nome']); ?>!
+            Bem-vindo,<h2><?php echo htmlspecialchars($_SESSION['usuario_nome']); ?></h2>.
         </div>
         <div class="grid">
             <div class="card">
                 <h3>Clientes</h3>
-                <p>Acesse o gerenciador de clientes para listar, incluir, editar e excluir clientes.</p>
+                <p>Acesse e liste, inclua, edite e exclua clientes.</p>
                 <a href="clientes.php">Gerenciar Clientes</a>
             </div>`
             <div class="card">

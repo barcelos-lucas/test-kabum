@@ -47,12 +47,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script src="assets/js/buscarCep.js"></script>
 </head>
 <body>
-    <header>
+    <header class="header-adicionar-enderecos">
         <h1>Adicionar Endereço</h1>
         <nav>
-            <a href="dashboard.php">Dashboard</a>
-            <a href="gerenciarEnderecos.php?id=<?= $cliente_id ?>">Voltar</a>
-            <a href="logout.php">Sair</a>
+            <a href="dashboard.php" class="btn-dashboard">Dashboard</a>
+            <a href="gerenciarEnderecos.php?id=<?= $cliente_id ?>" class="btn-dashboard">Voltar</a>
+            <a href="logout.php" class="btn-dashboard">Sair</a>
         </nav>
     </header>
 
@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <a href="gerenciarEnderecos.php?id=<?= $cliente_id ?>" class="btn">Voltar</a>
             </div>
         <?php endif; ?>
-
+        <h2>Novo endereço</h2>
         <form method="POST">
           <label>CEP:</label>
           <input type="text" id="cep" name="cep" required>

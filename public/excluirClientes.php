@@ -44,12 +44,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="assets/css/excluirClientes.css">
 </head>
 <body>
-    <header>
+    <header class="excluir-clientes">
         <h1>Excluir Cliente</h1>
         <nav>
-            <a href="dashboard.php">Dashboard</a>
-            <a href="clientes.php">Gerenciar Clientes</a>
-            <a href="logout.php">Sair</a>
+            <a href="dashboard.php" class="btn-excluir">Dashboard</a>
+            <a href="clientes.php" class="btn-excluir">Gerenciar Clientes</a>
+            <a href="logout.php" class="btn-excluir">Sair</a>
         </nav>
     </header>
 
@@ -61,8 +61,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p><strong>Telefone:</strong> <?= htmlspecialchars($cliente['telefone']) ?></p>
 
         <form method="POST">
-            <button type="submit" class="btn excluir">Sim, excluir</button>
             <a href="clientes.php" class="btn voltar">Cancelar</a>
+            <button type="submit" class="btn excluir">Excluir</button>
         </form>
     </div>
 </body>

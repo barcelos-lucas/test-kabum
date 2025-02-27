@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </head>
 <body>
-    <header>
+    <header class="header-editar-enderecos">
         <h1>Editar Endereço</h1>
     </header>
 
@@ -69,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <div class="botoes-acoes">
               <a href="gerenciarEnderecos.php?id=<?= $endereco['cliente_id'] ?>" class="btn-voltar">Voltar</a>
-              <button type="submit">Salvar</button>
+              <button type="submit" class="btn-salvar">Salvar</button>
             </div>
         </form>
     </div>

@@ -51,15 +51,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="assets/css/editarClientes.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mask-plugin/1.14.16/jquery.mask.min.js"></script>
-    <script src="assets/js/formularioClientes.js"></script>
+    <script src="assets/js/formsClientes.js"></script>
+    <script src="assets/js/buscarCep.js"></script>
+    <script src="assets/js/formataCampos.js" defer></script>
 </head>
 <body>
-    <header>
+    <header class="header-clientes">
         <h1>Editar Cliente</h1>
         <nav>
-            <a href="dashboard.php">Dashboard</a>
-            <a href="clientes.php">Gerenciar Clientes</a>
-            <a href="logout.php">Sair</a>
+            <a href="dashboard.php" class="btn-editar">Dashboard</a>
+            <a href="clientes.php" class="btn-editar">Gerenciar Clientes</a>
+            <a href="logout.php" class="btn-editar">Sair</a>
         </nav>
     </header>
 
@@ -67,7 +69,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <?php if ($sucessoEdicao): ?>
             <div class="mensagem sucesso">
                 <p><?= htmlspecialchars($mensagem) ?></p>
-                <a href="clientes.php" class="btn">Lista de Clientes</a>
             </div>
         <?php endif; ?>
 
@@ -92,8 +93,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <label>Telefone:</label>
             <input type="text" id="telefone" name="telefone" value="<?= htmlspecialchars($cliente['telefone']) ?>" required>
-
-            <button type="submit">Atualizar Cliente</button>
+            
+            <div class="botoes">
+                <a href="clientes.php" class="btn-cancelar">Cancelar</a>
+                <button type="submit" class="btn-atualizar">Atualizar</button>
+            </div>
         </form>
     </div>
 </body>

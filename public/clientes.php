@@ -23,12 +23,10 @@ $clientes = listarClientes($pdo);
     <link rel="stylesheet" href="assets/css/clientes.css">
 </head>
 <body>
-    <header>
-        <h1>Clientes</h1>
+    <header class="header-clientes">
+        <h1>CLIENTES</h1>
         <nav>
-            <a href="dashboard.php">Dashboard</a>
-            <a href="adicionarClientes.php">Adicionar Cliente</a>
-            <a href="logout.php">Sair</a>
+            <a href="dashboard.php" class="btn-dashboard">Dashboard</a>
         </nav>
     </header>
     
@@ -40,6 +38,7 @@ $clientes = listarClientes($pdo);
 
 
     <div class="container">
+    <a href="adicionarClientes.php" class="btn-adicionar"> Adicionar Clientes</a>
         <table border="1">
             <thead>
                 <tr>

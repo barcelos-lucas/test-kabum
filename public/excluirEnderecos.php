@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="assets/css/excluirEnderecos.css">
 </head>
 <body>
-    <header>
+    <header class="header-excluir-enderecos">
         <h1>Excluir Endereço</h1>
     </header>
 
@@ -46,12 +46,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p><strong>Cidade:</strong> <?= htmlspecialchars($endereco['cidade']) ?></p>
         <p><strong>CEP:</strong> <?= htmlspecialchars($endereco['cep']) ?></p>
 
-        <div class="botoes-acoes">
-            <a href="gerenciarEnderecos.php?id=<?= $endereco['cliente_id'] ?>" class="btn btn-voltar">❌ Cancelar</a>
             <form method="POST">
-                <button type="submit" class="btn btn-excluir">🗑️ Excluir</button>
+                <a href="clientes.php" class="btn voltar">Cancelar</a>
+                <button type="submit" class="btn excluir">Excluir</button>
             </form>
-        </div>
     </div>
 </body>
 </html>
