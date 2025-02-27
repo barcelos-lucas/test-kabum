@@ -2,7 +2,6 @@
 app/config/config.php
 .qodo/
 # Dependências do Composer
-vendor/
 
 # Logs, cache e arquivos temporários
 logs/
