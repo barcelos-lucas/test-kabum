@@ -1,32 +1,37 @@
 <?php
-require_once "config.php";
-require_once 'vendor/autoload.php';
+// Carregar a biblioteca dotenv
+require_once __DIR__ . '/../../vendor/autoload.php';
 use Dotenv\Dotenv;
+
+
+$dotenv = Dotenv::createImmutable(__DIR__ . '/../../', '.env', true);
+$dotenv->load();
+
 
 class Database {
     private $host;
     private $db_name;
     private $username;
     private $password;
+    private $port;
     public $conn;
 
     function __construct() {
-        $dotenv = Dotenv::createImmutable(__DIR__);
-        $dotenv->load();
-
-        $this->host = getenv('DB_HOST');
-        $this->db_name = getenv('DB_NAME');
-        $this->username = getenv('DB_USER');
-        $this->password = getenv('DB_PASS');
+        $this->host = $_ENV['DB_HOST'];
+        $this->db_name = $_ENV['DB_NAME'];
+        $this->username = $_ENV['DB_USER'];
+        $this->password = $_ENV['DB_PASS'];
+        $this->port = $_ENV['DB_PORT'];
     }
 
     function conectarBanco() {
         try {
-            $pdo = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME, DB_USER, DB_PASS, [
+            $dsn = "mysql:host=" . $this->host . ";dbname=" . $this->db_name . ";port=" . $this->port;
+            $this->conn = new PDO($dsn, $this->username, $this->password, [
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,  
                 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
             ]);
-            return $pdo;
+            return $this->conn;
         } catch (PDOException $e) {
             die("Erro na conexão: " . $e->getMessage());
         }
