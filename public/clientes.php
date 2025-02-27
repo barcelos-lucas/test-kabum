@@ -1,5 +1,7 @@
 <?php
-session_start(); 
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 if(!isset ($_SESSION['usuario_id'])) {
     header("Location: formsLogin.html");
     exit;
@@ -29,7 +31,7 @@ $clientes = listarClientes($pdo);
             <a href="dashboard.php" class="btn-dashboard">Dashboard</a>
         </nav>
     </header>
-    
+
     <?php if (isset($_GET['excluido'])): ?>
     <div class="mensagem sucesso">
         Cliente excluído com sucesso!

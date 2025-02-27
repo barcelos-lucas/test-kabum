@@ -7,6 +7,8 @@ if (!isset($_SESSION['usuario_id'])) {
 
 require_once __DIR__ . '/../app/config/config.php';
 require_once __DIR__ . '/../app/services/clienteServices.php';
+require_once __DIR__ . '/../app/services/permsMiddleware.php';
+verificarPermissao('admin');
 
 $pdo = conectarBanco();
 
