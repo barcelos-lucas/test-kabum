@@ -1,12 +1,24 @@
 <?php
 require_once "config.php";
+require_once 'vendor/autoload.php';
+use Dotenv\Dotenv;
 
 class Database {
-    private $host = DB_HOST;
-    private $db_name = DB_NAME;
-    private $username = DB_USER;
-    private $password = DB_PASS;
+    private $host;
+    private $db_name;
+    private $username;
+    private $password;
     public $conn;
+
+    function __construct() {
+        $dotenv = Dotenv::createImmutable(__DIR__);
+        $dotenv->load();
+
+        $this->host = getenv('DB_HOST');
+        $this->db_name = getenv('DB_NAME');
+        $this->username = getenv('DB_USER');
+        $this->password = getenv('DB_PASS');
+    }
 
     function conectarBanco() {
         try {
