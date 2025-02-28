@@ -1,4 +1,4 @@
 <?php
 
-echo "PORT: " . getenv('PORT') . "<br>";
- echo "teste railway!";
+echo "PORT: " . $_ENV['PORT'] . "<br>";	
+echo "teste railway!";
