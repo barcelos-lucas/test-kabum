@@ -7,7 +7,10 @@
   "require-dev": {
     "phpunit/phpunit": "^11.5"
   },
-  "scripts": {
-    "start": "php -S 0.0.0.0:${PORT:-8080} -t ."
-  }
+  
+    "scripts": {
+      "start": "php -S 0.0.0.0:$PORT -t .",
+      "start:local": "php -S 0.0.0.0:8080 -t ."
+    }
+
 }
