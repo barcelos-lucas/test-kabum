@@ -1,5 +1,6 @@
 # Arquivos sensíveis
 .env
+echo "Procfile" >> .gitignore
 
 # Dependências do Composer
 vendor/
