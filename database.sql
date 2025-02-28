@@ -122,7 +122,5 @@ UNLOCK TABLES;
 -- Dump completed on 2025-02-27 11:33:13
 
 
-INSERT INTO usuarios (nome_usuario, email, senha, cargo, status, criado_em, atualizado_em)
-VALUES ('Admin', 'admin@teste.com', '$2y$10$rZ7z5EtsIvajbNq5Oud46e9A54rhYXqR8n6LbpF5NzNu1FFHXNwPG', 'admin', 'ativo', NOW(), NOW());
 
 
