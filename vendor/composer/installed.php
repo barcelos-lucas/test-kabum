@@ -3,7 +3,7 @@
         'name' => 'test-kabum/test-kabum',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '408618264f523a2185f0f6a477d74d3bd31f9172',
+        'reference' => '59370c7e0a553c31fe93dba3d1f33225dc6b7541',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -292,7 +292,7 @@
         'test-kabum/test-kabum' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '408618264f523a2185f0f6a477d74d3bd31f9172',
+            'reference' => '59370c7e0a553c31fe93dba3d1f33225dc6b7541',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
