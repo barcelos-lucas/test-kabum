@@ -3,10 +3,9 @@ require_once 'database.php';
 
 $database = new Database();
 
-$conn = $database->conectarBanco();
-
-if ($conn) {
+try {
+    $conn = $database->conectarBanco();
     echo "Conexão com o banco de dados bem-sucedida!";
-} else {
-    echo "Erro na conexão com o banco de dados.";
+} catch (PDOException $e) {
+    echo "Erro na conexão com o banco de dados: " . $e->getMessage();
 }
