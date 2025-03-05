@@ -1,1 +1,1 @@
-web: php-fpm --fpm-config /app/php-fpm.conf -D
+web: php -S 0.0.0.0:${PORT} -t public/
